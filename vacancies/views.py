@@ -71,7 +71,7 @@ class DetailVacancyView(TemplateView):
                 'application_form': application_form
             })
         if not request.user.is_authenticated:
-            messages.error(request, 'Отклик могут оставить только авторирозованные.')
+            messages.error(request, 'Отклик могут оставить только авторизованные.')
             return render(request, self.template_name, {
                 'vacancy': vacancy,
                 'application_form': application_form,
